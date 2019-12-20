@@ -19,3 +19,25 @@ CalBayS_v1 was run in Ubuntu 19.10 using the nohup option. The script is python 
 - emcee
 - random
 
+## Configuration Parameters
+
+## Attribution
+
+Please cite Cardoso, Rivera et al. (2019) if you find this code useful in your research.
+The BibTeX entry for the paper is:
+
+```
+@article {Cardoso791178,
+	author = {Cardoso, M. V. C. and Rivera, J. D. and Vitale, P. M. and Degenhardt, M. F. S. and Abiko, L.A. and Oliveira, C. L. P. and Salinas, R. K.},
+	title = {CALX-CBD1 Ca2+-binding cooperativity studied by NMR spectroscopy and ITC with Bayesian statistics},
+	elocation-id = {791178},
+	year = {2019},
+	doi = {10.1101/791178},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2019/10/03/791178},
+	eprint = {https://www.biorxiv.org/content/early/2019/10/03/791178.full.pdf},
+	journal = {bioRxiv}
+}
+```
+
+
