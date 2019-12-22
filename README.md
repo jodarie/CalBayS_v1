@@ -21,6 +21,12 @@ CalBayS_v1 was run in Ubuntu 19.10 using the nohup option. The script is python 
 
 ## Configuration Parameters
 
+Input data: In order to run the script the user must create files with each corresponding column to each experiment with different Wiseman C-parameter.
+
+- Enthalpy information data...
+
+
+
 ## Attribution
 
 Please cite Cardoso, Rivera et al. (2019) if you find this code useful in your research.
