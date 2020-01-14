@@ -109,6 +109,15 @@ Here _i_ correponds to each measurement.
 
 ## Running the code
 
+After download the code and setting the file params_all.py, the user can run it through the following command line:
+
+```
+$ python MAIN_RUN.py
+```
+
+The code has an example by using 4 titration curves. 
+
+
 ## Attribution
 
 Please cite Cardoso, Rivera et al. (2019) if you find this code useful in your research.
