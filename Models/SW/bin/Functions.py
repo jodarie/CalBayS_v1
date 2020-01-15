@@ -93,7 +93,7 @@ def Best_fit(Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,bo,dim,nw,nc,lab,nmodel,eArgs):
         DHm_th[i][j] = DHm(Xtot,Kv,Ptot[i][j],DH) 
     if ~np.isnan(np.sum(DHm_th)):
       for i in range(nconc):
-        DH_th[:,i] = (1.0/CS[i])*((Ptot[1:,i]*DHm_th[1:,i]*(0.5+(Vc/vi[1:,i])))+(Ptot[:-1,i]*DHm_th[:-1,i]*(0.5-(Vc/vi[:-1,i]))))
+        DH_th[:,i] = (1.0/CS[i])*((Ptot[1:,i]*DHm_th[1:,i]*(0.5+(Vc[i]/vi[1:,i])))+(Ptot[:-1,i]*DHm_th[:-1,i]*(0.5-(Vc[i]/vi[:-1,i]))))
         if eArgs[0]:
           NProb = NProb+(Ndata)*np.log(s[i])+(1.0/(2.0*s[i]*s[i]))*np.sum((DH_th[:,i]-DH_exp[:,i]+q0[i])**2)-ln_Gauss(CS[i],So[i],errSo*So[i])-ln_Gauss(eps[i],eArgs[1][i],eArgs[2][i])
         else:
@@ -202,7 +202,7 @@ def Figure_fit(p,out,Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,color_code,nmodel):
     for j,Xtot in enumerate(Xrow):
       DHm_th[i][j] = DHm(Xtot,Kv,Ptot[i][j],DH)
   for i in range(nconc):
-    DH_th[:,i] = (1.0/CS[i])*((Ptot[1:,i]*DHm_th[1:,i]*(0.5+(Vc/vi[1:,i])))+(Ptot[:-1,i]*DHm_th[:-1,i]*(0.5-(Vc/vi[:-1,i]))))+q0[i]
+    DH_th[:,i] = (1.0/CS[i])*((Ptot[1:,i]*DHm_th[1:,i]*(0.5+(Vc[i]/vi[1:,i])))+(Ptot[:-1,i]*DHm_th[:-1,i]*(0.5-(Vc[i]/vi[:-1,i]))))+q0[i]
   plt.rc('font', family='serif',size=24)
   fig = plt.figure(figsize=(10,8))
   for i in range(nconc):
