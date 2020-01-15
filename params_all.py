@@ -14,7 +14,7 @@ run_nohup = True # Run in background the process, parallel when more than one mo
 #          Input data            #
 ##################################
 
-Volume_cell = 1.4397 # ml Volume of cell
+Volume_cell = [1.4397,1.4397,1.4397,1.4397] # ml Volume of cell
 Conc_injection = [500,500,500,500] # uM
 Conc_protein_data = "Data/Protein.dat" # Path + file name of protein concentration data 
 Conc_ligand_data = "Data/Ligand.dat" # Path + file name of ligand concentration data
