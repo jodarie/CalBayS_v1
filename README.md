@@ -34,7 +34,7 @@ To run the script the user must create files with each corresponding column to e
 - Conc_protein_data --> Path + file name of protein concetration (&mu;M).
 - Conc_ligand_data --> Path + file name of ligand concetration (&mu;M).
 - DH_data --> Path + file name of enthalpy/molar.
-- Volume_injection_data --> Path + file name of injection volume.
+- Volume_injection_data --> Path + file name of injection volume (ml).
 - Volume_cell --> Vector of cell volume (ml).
 - Conc_injection --> Vector of injection concentration (&mu;M).
 
