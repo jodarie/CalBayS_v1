@@ -39,10 +39,10 @@ bo,ndim,lab = func.tools_fit(So,boCond[0],boCond[1],boCond[2],boCond[3],boCond[4
 
 eArgs = [params.ePrior,params.eP,params.deP]
 
-pos_i,chain = func.Best_fit(Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,bo,ndim,Nw,Nc,lab,eArgs)
+pos_i,chain = func.Best_fit(Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,bo,ndim,Nw,Nc,lab,eArgs,params.ns)
 np.savetxt(out+'/Chains.dat',chain,fmt='%s')
 func.Chain_figure(chain,out,ndim,Nw,Nc,lab)
 func.Correlation_figure(chain,out,Nw,Nc,burnin,lab)
 res = func.MCMC_analysis(chain,out,Nw,Nc,burnin)
 P = res[:,0]
-func.Figure_fit(P,out,Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,params.color)
+func.Figure_fit(P,out,Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,params.color,params.ns)
