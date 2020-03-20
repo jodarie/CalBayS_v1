@@ -29,11 +29,11 @@ def tools_fit(So,minn,maxn,minK,maxK,minDH,maxDH,minq0,maxq0):
 def ln_Gauss(x,mu,sigma):
   return -np.log(sigma)-0.5*np.log(2*np.pi)-((x-mu)**2/(2.0*sigma**2))
 
-def Xfree(Xtot,n,K,P_tot):
+def Xfree(Xtot,n,K,P_tot,ns):
   def pol(x):
-    return -K*x**(n+1.0)+K*(Xtot-n*P_tot)*x**n-x+Xtot
+    return -K*x**(n+1.0)+K*(Xtot-ns*P_tot)*x**n-x+Xtot
   def dpol(x):
-    return -K*(n+1.0)*x**(n)+K*n*(Xtot-n*P_tot)*x**(n-1.0)-1.0
+    return -K*(n+1.0)*x**(n)+K*n*(Xtot-ns*P_tot)*x**(n-1.0)-1.0
   try:
     res = op.brentq(pol,0,Xtot,maxiter=500)
     if 0<res<Xtot:
@@ -43,11 +43,11 @@ def Xfree(Xtot,n,K,P_tot):
   except:
     return Xtot
 
-def theta_func(Xtot,n,K,P_tot):
+def theta_func(Xtot,n,K,P_tot,ns):
   xfn =  Xfree(Xtot,n,K,P_tot)**(n)
-  return n*K*xfn/(1.0+K*xfn)
+  return ns*K*xfn/(1.0+K*xfn)
 
-def Best_fit(Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,bo,dim,nw,nc,lab,eArgs):
+def Best_fit(Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,bo,dim,nw,nc,lab,eArgs,ns):
   nconc = len(So)
   DH_exp = DHmatrix[1:,:]
   Ndata = len(DH_exp)
@@ -67,7 +67,7 @@ def Best_fit(Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,bo,dim,nw,nc,lab,eArgs):
       Ptot[:,i] = Pmatrix[:,i]*e
     for i,Xrow in enumerate(Xmatrix):
       for j,Xtot in enumerate(Xrow):
-        theta_th[i][j] = theta_func(Xtot,n,K,Ptot[i][j]) 
+        theta_th[i][j] = theta_func(Xtot,n,K,Ptot[i][j],ns) 
     if ~np.isnan(np.sum(theta_th)):
       for i in range(nconc):
         DH_th[:,i] = (DH/CS[i])*((Ptot[1:,i]*theta_th[1:,i]*(0.5+(Vc[i]/vi[1:,i])))+(Ptot[:-1,i]*theta_th[:-1,i]*(0.5-(Vc[i]/vi[:-1,i]))))
@@ -157,7 +157,7 @@ def Correlation_figure(chain,out,Nw,Nc,burn_in,lab):
   plt.close()
   return None
 
-def Figure_fit(P,out,Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,color_code):
+def Figure_fit(P,out,Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,color_code,ns):
   nconc = len(So)
   DH_exp = DHmatrix[1:,:]
   Ndata = len(DH_exp)
@@ -174,7 +174,7 @@ def Figure_fit(P,out,Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,color_code):
     Ptot[:,i] = Pmatrix[:,i]*e
   for i,Xrow in enumerate(Xmatrix):
     for j,Xtot in enumerate(Xrow):
-      theta_th[i][j] = theta_func(Xtot,n,K,Ptot[i][j])
+      theta_th[i][j] = theta_func(Xtot,n,K,Ptot[i][j],ns)
   for i in range(nconc):
     DH_th[:,i] = (DH/CS[i])*((Ptot[1:,i]*theta_th[1:,i]*(0.5+(Vc[i]/vi[1:,i])))+(Ptot[:-1,i]*theta_th[:-1,i]*(0.5-(Vc[i]/vi[:-1,i]))))+q0[i]
   plt.rc('font', family='serif',size=24)
