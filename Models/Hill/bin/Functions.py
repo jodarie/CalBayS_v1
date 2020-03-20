@@ -44,7 +44,7 @@ def Xfree(Xtot,n,K,P_tot,ns):
     return Xtot
 
 def theta_func(Xtot,n,K,P_tot,ns):
-  xfn =  Xfree(Xtot,n,K,P_tot)**(n)
+  xfn =  Xfree(Xtot,n,K,P_tot,ns)**(n)
   return ns*K*xfn/(1.0+K*xfn)
 
 def Best_fit(Pmatrix,Xmatrix,DHmatrix,Vc,vi,So,bo,dim,nw,nc,lab,eArgs,ns):
