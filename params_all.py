@@ -42,7 +42,7 @@ burn_in = 1000 # Burn in
 
 Hill = True # True --> Hill model is used. False --> Hill model is not used
 Boundary_conditions_Hill = (0,8,0.01,100,-30,2,-5,5) # (minnHill,maxnHill,minKd,maxKd,minDH,maxDH,minq0,maxq0)
-ns = 4 # Set the stoichiometry
+ns = 4.0 # Set the stoichiometry
 
 ##################################
 #   Set Gaussian priors (Hill)   #
