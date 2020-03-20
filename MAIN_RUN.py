@@ -28,6 +28,7 @@ if pall.Hill:
   f.write('DH_data = "'+str(DH)+'"\n')
   f.write('Volume_injection_data = "'+str(vol_inj)+'"\n')
   f.write('color = '+str(color)+'\n')
+  f.write('ns = '+str(pall.ns)+'\n')
   f.write('ePrior = '+str(pall.ePrior_Hill)+'\n')
   f.write('eP = '+str(pall.eP_Hill)+'\n')
   f.write('deP = '+str(pall.deP_Hill)+'\n')
