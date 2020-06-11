@@ -120,20 +120,19 @@ The code has an example by using 4 titration curves.
 
 ## Attribution
 
-Please cite Cardoso, Rivera et al. (2019) if you find this code useful in your research.
+Please cite Cardoso, Rivera et al. (2020) if you find this code useful in your research.
 The BibTeX entry for the paper is:
 
 ```
-@article {Cardoso791178,
-	author = {Cardoso, M. V. C. and Rivera, J. D. and Vitale, P. M. and Degenhardt, M. F. S. and Abiko, L.A. and Oliveira, C. L. P. and Salinas, R. K.},
-	title = {CALX-CBD1 Ca2+-binding cooperativity studied by NMR spectroscopy and ITC with Bayesian statistics},
-	elocation-id = {791178},
-	year = {2019},
-	doi = {10.1101/791178},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2019/10/03/791178},
-	eprint = {https://www.biorxiv.org/content/early/2019/10/03/791178.full.pdf},
-	journal = {bioRxiv}
+@article{CARDOSO2020,
+title = "CALX-CBD1 Ca2+-binding cooperativity studied by NMR spectroscopy and ITC with Bayesian statistics",
+journal = "Biophysical Journal",
+year = "2020",
+issn = "0006-3495",
+doi = "https://doi.org/10.1016/j.bpj.2020.05.031",
+url = "http://www.sciencedirect.com/science/article/pii/S0006349520304549",
+author = "M.V.C. Cardoso and J.D. Rivera and P.M. Vitale and M.F.S. Degenhardt and L.A. Abiko and C.L.P. Oliveira and R.K. Salinas",
+abstract = "he Na+/Ca2+ exchanger of Drosophila melanogaster, CALX, is the main Ca2+-extrusion mechanism in olfactory sensory neurons and photoreceptor cells. Na+/Ca2+ exchangers have two Ca2+ sensor domains, CBD1 and CBD2. In contrast to the mammalian homologues, CALX is inhibited by Ca2+-binding to CALX-CBD1, while CALX-CBD2 does not bind Ca2+ at physiological concentrations. CALX-CBD1 consists of a β-sandwich and displays four Ca2+ binding sites at the tip of the domain. In this study, we used NMR spectroscopy and isothermal titration calorimetry (ITC) to investigate the cooperativity of Ca2+-binding to CALX-CBD1. We observed that this domain binds Ca2+ in the slow exchange regime at the NMR chemical shift time scale. Ca2+-binding restricts the dynamics in the Ca2+-binding region. Experiments of 15N CEST and 15N R2 dispersion allowed the determination of Ca2+ dissociation rates (≈30s-1). NMR titration curves of residues in the Ca2+-binding region were sigmoidal due to the contribution of chemical exchange to transverse magnetization relaxation rates, R2. Hence, a novel approach to analyze NMR titration curves was proposed. Ca2+-binding cooperativity was examined assuming two different stoichiometric binding models and using a Bayesian approach for data analysis. Fittings of NMR and ITC binding curves to the Hill model yielded nHill∼2.9, near maximum cooperativity (nHill=4). By assuming a stepwise model to interpret the ITC data, we found that the probability of binding from 2 up to 4 Ca2+ is approximately three orders of magnitude higher than that of binding a single Ca2+. Hence, four Ca2+ ions bind almost simultaneously to CALX-CBD1. Cooperative Ca2+-binding is key to enable this exchanger to efficiently respond to changes in the intracellular Ca2+-concentration in sensory neuronal cells."
 }
 ```
 
