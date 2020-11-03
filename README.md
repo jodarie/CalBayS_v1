@@ -19,6 +19,8 @@ CalBayS_v1 was run in Ubuntu 19.10 using the nohup option. The script is python 
 - emcee
 - random
 
+The code uses LaTeX package to generate the figures.
+
 ## Configuration Parameters
 
 The parameters should be set in params_all.py file.
