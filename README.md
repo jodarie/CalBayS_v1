@@ -21,6 +21,8 @@ CalBayS_v1 was run in Ubuntu 19.10 using the nohup option. The script is python 
 
 The code uses LaTeX package to generate the figures.
 
+For python 3 version (https://github.com/jodarie/CalBayS_v1.1_py3)
+
 ## Configuration Parameters
 
 The parameters should be set in params_all.py file.
